@@ -1,0 +1,7 @@
+# NEVER commit the real student list or review files — they contain names + SAP IDs
+*.xlsx
+*.xls
+*.csv
+tools/needs_review.csv
+tools/shared_sap_ids.csv
+__pycache__/

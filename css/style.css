@@ -1,0 +1,47 @@
+@font-face{font-family:Montserrat;font-weight:400;font-display:swap;src:url(../fonts/montserrat-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-weight:600;font-display:swap;src:url(../fonts/montserrat-latin-600-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-weight:700;font-display:swap;src:url(../fonts/montserrat-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Alegreya;font-weight:700;font-display:swap;src:url(../fonts/alegreya-latin-700-normal.woff2) format('woff2')}
+@font-face{font-family:Montserrat;font-weight:800;font-display:swap;src:url(../fonts/montserrat-latin-800-normal.woff2) format('woff2')}
+:root{--navy:#000e34;--blue:#1e6bff;--saf:#f07a22;--grn:#1fa352;--text:#fff;--mut:rgba(255,255,255,.72)}
+*{box-sizing:border-box}
+html{background:var(--navy)}
+body{margin:0;min-height:100vh;display:flex;flex-direction:column;font-family:Montserrat,"Segoe UI",Arial,sans-serif;color:var(--text);line-height:1.5;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.bg{position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(ellipse 70% 45% at 50% 108%,rgba(20,110,255,.6),transparent 70%),
+  radial-gradient(ellipse 60% 40% at 50% 40%,rgba(10,40,140,.35),transparent 70%),
+  linear-gradient(#000e34,#00104a 60%,#001a7a)}
+.top{padding:18px 16px 0;text-align:center}
+.partners{width:min(1000px,100%);height:auto}
+main{flex:1;width:min(980px,100%);margin:0 auto;padding:28px 20px 40px}
+.hero{max-width:620px;margin:18px auto 0;text-align:center}
+.eyebrow{margin:0 0 10px;font-weight:600;letter-spacing:.28em;text-transform:uppercase;font-size:.78rem;color:#8dbbff}
+.eyebrow.ok{color:#5be08e}
+h1{margin:0;font-size:clamp(2rem,6.4vw,3.2rem);line-height:1.12;font-weight:800}
+h1 .saf{color:var(--saf)} h1 .grn{color:var(--grn)}
+h2{margin:0 0 20px;font-size:clamp(1.5rem,4.5vw,2.2rem);font-weight:800}
+.lede{color:var(--mut);margin:14px auto 26px;max-width:520px;font-size:.98rem}
+.card{text-align:left;background:rgba(2,16,70,.72);border:1px solid rgba(90,160,255,.35);border-radius:18px;padding:26px;backdrop-filter:blur(8px);box-shadow:0 20px 60px rgba(0,0,0,.35)}
+label{display:block;font-weight:600;font-size:.85rem;margin:0 0 6px;color:#cfe0ff}
+input{width:100%;padding:14px 15px;margin-bottom:18px;font:inherit;color:#fff;background:rgba(0,10,50,.8);border:1.5px solid rgba(110,170,255,.4);border-radius:10px;outline:none}
+input::placeholder{color:rgba(255,255,255,.38)}
+input:focus{border-color:#5aa0ff;box-shadow:0 0 0 3px rgba(60,140,255,.3)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:14px 22px;font:inherit;font-weight:700;color:#fff;cursor:pointer;border:0;border-radius:999px;
+  background:linear-gradient(90deg,#e8691a,#f08a2e 35%,#1e9a4c);box-shadow:0 8px 24px rgba(30,107,255,.25);transition:transform .15s,filter .15s}
+.btn:hover:not(:disabled){transform:translateY(-1px);filter:brightness(1.08)}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+.btn.ghost{background:transparent;border:2px solid #fff;box-shadow:none}
+.btn.link{background:none;box-shadow:none;width:auto;color:#9cc3ff;font-weight:600;text-decoration:underline}
+.error{margin:-4px 0 16px;padding:11px 14px;border-radius:10px;background:rgba(255,70,70,.14);border:1px solid rgba(255,110,110,.5);color:#ffd3d3;font-size:.9rem}
+.hint{margin:16px 0 0;font-size:.78rem;color:var(--mut);text-align:center}
+.result{text-align:center}
+.frame{padding:10px;border-radius:14px;background:rgba(90,160,255,.18);box-shadow:0 24px 70px rgba(0,0,0,.5)}
+#cert{display:block;width:100%;height:auto;border-radius:6px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;align-items:center;margin-top:24px}
+.actions .btn:not(.link){width:auto;min-width:230px}
+footer{display:flex;align-items:center;justify-content:center;gap:14px;padding:18px;color:var(--mut);font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+footer .open{height:46px;width:auto}
+[hidden]{display:none!important}
+@media (max-width:520px){.card{padding:20px}.actions .btn:not(.link){width:100%}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
